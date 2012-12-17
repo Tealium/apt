@@ -30,7 +30,7 @@ execute "apt-get update" do
   command "apt-get update"
   ignore_failure true
   action :nothing
-end
+end.run_action(:run)
 
 # provides /var/lib/apt/periodic/update-success-stamp on apt-get update
 package "update-notifier-common" do
